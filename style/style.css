@@ -1,0 +1,95 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Helvetica;
+    background-color: #fafafa;
+  }
+  
+#mainContainer {
+    width: 20 rem;
+    padding-bottom: 2.5rem;
+}
+
+#Header {
+    justify-content: center;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background-color: transparent;
+    border-radius: 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.focus-ring {
+    background-color: transparent;
+}
+
+.header {
+    margin-top: 0;
+}
+
+#Clock {
+    font-size:45px;
+}
+
+#AMPM {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+#MeetingTime {
+    margin-top: 30px;
+}
+
+#MiscTime {
+    margin-top: 30px;
+}
+
+#Output {
+    margin-top: 10px;
+}
+
+#LightDark {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dark {
+    background-color: #121212;
+    color:#dddddd;
+    border-color: #212121;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+  
+  #Footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+  }

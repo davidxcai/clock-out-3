@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Out 3</title>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="/app/app.js"></script>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/style/style2.css">
+</head>
+
+<body class="mode">
+    <div id="mainContainer" class="container" style="width: 20rem;">
+        <div id="Header">
+            <h1 class="header">Clock-</h1>
+            <h1 class="bi bi-clock"></h1>
+            <h1 class="header">ut</h1>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col form-floating">
+                    <input type='number' id='ClockInHour' min='1' max='12' maxlength="2" inputmode="numeric"
+                        class="form-control input" placeholder="" />
+                    <label for="ClockInHour">Hour In</label>
+                </div>
+                <div class="col form-floating">
+                    <input type='number' id='ClockInMinute' min='0' max='59' maxlength="2" inputmode="numeric"
+                        class="form-control input minute" placeholder="" />
+                    <label for="ClockInMinute">Minute In</label>
+                </div>
+            </div>
+            <!--AM PM-->
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="AMPM">
+                <input id="AM" type="radio" class="btn-check input" name="btnradio" autocomplete="off" value='AM'
+                    checked>
+                <label class="btn btn-outline-dark" for="AM">AM</label>
+
+                <input id="PM" type="radio" class="btn-check input" name="btnradio" autocomplete="off" value='PM'>
+                <label class="btn btn-outline-dark" for="PM">PM</label>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div>
+            <div class="row">
+                <div class="form-floating col ">
+                    <input type='number' id='WorkingHour' min='0' max='99' inputmode="numeric"
+                        class="form-control input" placeholder="" />
+                    <label for="WorkingHour">Tx Hour</label>
+                </div>
+                <div class="form-floating col ">
+                    <input type='number' id='WorkingMinute' min='0' max='59' maxlength="2" inputmode="numeric"
+                        class="form-control input minute" placeholder="" />
+                    <label for="WorkingMinute">Tx Minute</label>
+                </div>
+            </div>
+        </div>
+
+        <!--Settings-->
+        <p class="d-inline-flex row">
+        <div id="Settings" class="col-12" type="button" data-bs-toggle="collapse" data-bs-target="#CollapseSettings"
+            aria-expanded="false" aria-controls="CollapseSettings">
+            Settings
+            <i id="SettingsArrow" class="col-12 bi bi-chevron-down"></i>
+        </div>
+        </p>
+        <div class="collapse" id="CollapseSettings">
+            <div class="row">
+                <!-- Lunch Minute -->
+                <div class="form-floating col">
+                    <input type='number' id='Lunch' min='0' value='30' inputmode="numeric" class="form-control input"
+                        placeholder="" />
+                    <label class="active" for="Lunch">Lunch</label>
+                </div>
+                <!-- Meeting Minute -->
+                <div class="form-floating col">
+                    <input type='number' id='Meeting' min='0' value='0' inputmode="numeric" class="form-control input"
+                        placeholder="" />
+                    <label for="Meeting">Meeting</label>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <!-- Lost Time Minute -->
+                <div class="form-floating col">
+                    <input type='number' id='LostTime' min='0' max='99' value='0' inputmode="numeric"
+                        class="form-control input" placeholder="" />
+                    <label for="LostTime">Lost Time</label>
+                </div>
+                <!-- Productivity -->
+                <div class="form-floating col">
+                    <input type='number' id='Productivity' min='0' max='999' value='95' inputmode="numeric"
+                        class="form-control input" placeholder="" />
+                    <label class="active" for="Productivity">Productivity %</label>
+                </div>
+            </div>
+            <!-- Dark Mode Toggle -->
+            <p style="margin-top: 15px; margin-bottom: 0;">Dark Mode</p>
+            <div class="form-check form-switch">
+                <input id="DarkModeToggle" class="form-check-input " type="checkbox" role="switch"/>
+            </div>
+            <hr>
+        </div>
+        
+        <div style="padding-top: 10px;">
+            <h5>
+                Clock-out Time:
+            </h5>
+            <h1 id='Output' style="margin-bottom: 10px; margin-top: 10px;">:</h1>
+            <p style="margin-bottom: 5px;">Total Time Worked:</p>
+            <div id="TotalTime"></div>
+        </div>
+    </div>
+    <footer id="Footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
